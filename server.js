@@ -1,13 +1,13 @@
 
-
+// setting up the server.
+const express = require('express');
 
 // create a route that the front end can request data from
 const { animals } = require('./data/animals.json');
 
 
 
-// setting up the server.
-const express = require('express');
+
 
 const PORT = process.env.PORT || 3001;
 
