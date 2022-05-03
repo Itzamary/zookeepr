@@ -1,3 +1,6 @@
+
+
+
 // create a route that the front end can request data from
 const { animals } = require('./data/animals.json');
 
@@ -5,6 +8,8 @@ const { animals } = require('./data/animals.json');
 
 // setting up the server.
 const express = require('express');
+
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 
@@ -60,8 +65,8 @@ app.get('/api/animals', (req, res) => {
     res.json(results);
 });
 
-app.listen(3001, () => {
-    console.log('API server now on port 3001');
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}`);
 });
 
 
