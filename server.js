@@ -123,6 +123,21 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
+// get request to serve the animals.html file
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+// get request to sever the zookeepers.html file.
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+// wildcard route for non existant routs when searched the *  acts as a wildcard route, this route should ALWAYS be LAST!
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
