@@ -13,6 +13,9 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
+// adds the static files to allow use in the html.
+app.use(express.static('public'));
+
 // these two bottom app.use are to accept incoming data from the user
 // parse incoming string or array data
 app.use(express.urlencoded({extended: true}));
