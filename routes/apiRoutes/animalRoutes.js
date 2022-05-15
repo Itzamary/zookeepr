@@ -32,4 +32,3 @@ router.post('/animals', (req, res) => {
 });
 
 module.exports = router;
-
